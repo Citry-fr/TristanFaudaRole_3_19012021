@@ -1,7 +1,7 @@
 .main__header {
   &__teaser {
     display: flex;
-    background-color: lighten(map-get($color, lgrey), 5%);
+    background-color: lighten(map-get($color, grey), 45%);
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -12,7 +12,7 @@
       margin-bottom: 0%;
     }
     &__p {
-      color: map-get($color, dgrey);
+      color: map-get($color, grey);
       font-size: 1em;
     }
     &__button {
@@ -24,13 +24,14 @@
       width: 75%;
       max-width: 295px;
       max-height: 66px;
+      min-width: 129px;
       padding: 15px 0px 15px 0px;
       border-radius: 25px;
       text-decoration: none;
       border: none;
       color: white;
       font-weight: bold;
-      box-shadow: 2px 3px 10px map-get($color, dgrey);
+      box-shadow: 2px 3px 10px map-get($color, grey);
       font-size: 1em;
     }
   }

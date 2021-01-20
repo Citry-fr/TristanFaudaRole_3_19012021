@@ -3,15 +3,15 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    background-color: map-get($color, lgrey);
+    background-color: lighten(map-get($color, grey), 42%);
     &__map {
       align-self: center;
       font-size: 0.8em;
-      color: darken(map-get($color, dgrey), 5%);
+      color: darken(map-get($color, grey), 29%);
     }
     &__p {
       font-size: 0.8em;
-      color: darken(map-get($color, dgrey), 5%);
+      color: darken(map-get($color, grey), 29%);
     }
   }
 }
