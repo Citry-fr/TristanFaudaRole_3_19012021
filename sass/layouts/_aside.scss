@@ -1,0 +1,46 @@
+.main__aside {
+  padding: 0px 10px 0px 10px;
+  &__card {
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    &__content {
+      display: flex;
+      gap: 10px;
+      background-color: lighten(map-get($color, grey), 44%);
+      border-radius: 15px;
+      padding: 10px 0px 10px 0px;
+      @include shadow;
+      &__icone {
+        align-self: center;
+        color: darken(map-get($color, grey), 15%);
+        font-size: 1.2em;
+      }
+      &__number {
+        display: flex;
+        background-color: map-get($color, primary);
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        color: white;
+        position: relative;
+        right: 8px;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      &__instruct {
+        width: 100%;
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 0.9em;
+        text-align: center;
+        position: relative;
+        top: 2px;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

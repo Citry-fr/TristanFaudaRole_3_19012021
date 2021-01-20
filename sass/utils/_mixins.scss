@@ -11,3 +11,7 @@
 @mixin textFont {
   font-family: map-get($font, text);
 }
+
+@mixin shadow {
+  box-shadow: 2px 3px 10px map-get($color, grey);
+}

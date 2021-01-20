@@ -1,7 +1,7 @@
 .main__header {
   &__teaser {
     display: flex;
-    background-color: lighten(map-get($color, grey), 45%);
+    background-color: lighten(map-get($color, grey), 44%);
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -12,7 +12,7 @@
       margin-bottom: 0%;
     }
     &__p {
-      color: map-get($color, grey);
+      color: darken(map-get($color, grey), 15%);
       font-size: 1em;
     }
     &__button {
@@ -31,7 +31,7 @@
       border: none;
       color: white;
       font-weight: bold;
-      box-shadow: 2px 3px 10px map-get($color, grey);
+      @include shadow;
       font-size: 1em;
     }
   }

@@ -39,7 +39,7 @@ body {
 }
 .main__header__teaser {
   display: flex;
-  background-color: #fbfbfb;
+  background-color: #f8f8f8;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -51,7 +51,7 @@ body {
   margin-bottom: 0%;
 }
 .main__header__teaser__p {
-  color: #888;
+  color: #626262;
   font-size: 1em;
 }
 .main__header__teaser__button {
@@ -68,6 +68,53 @@ body {
   font-weight: bold;
   box-shadow: 2px 3px 10px #888;
   font-size: 1em;
+}
+
+.main__aside {
+  padding: 0px 10px 0px 10px;
+}
+.main__aside__card {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.main__aside__card__content {
+  display: flex;
+  gap: 10px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  padding: 10px 0px 10px 0px;
+  box-shadow: 2px 3px 10px #888;
+}
+.main__aside__card__content__icone {
+  align-self: center;
+  color: #626262;
+  font-size: 1.2em;
+}
+.main__aside__card__content__number {
+  display: flex;
+  background-color: #9356dc;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  color: white;
+  position: relative;
+  right: 8px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.main__aside__card__content__instruct {
+  width: 100%;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+  position: relative;
+  top: 2px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */
