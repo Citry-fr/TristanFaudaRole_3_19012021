@@ -1,0 +1,7 @@
+body {
+  @include textFont;
+  @include mobile {
+    width: auto;
+    margin: 0px;
+  }
+}

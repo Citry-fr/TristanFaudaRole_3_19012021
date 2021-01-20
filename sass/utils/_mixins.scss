@@ -1,0 +1,13 @@
+@mixin mobile {
+  @media all and (max-width: map-get($breakpoint, mobile)) {
+    @content;
+  }
+}
+
+@mixin titleFont {
+  font-family: map-get($font, title);
+}
+
+@mixin textFont {
+  font-family: map-get($font, text);
+}

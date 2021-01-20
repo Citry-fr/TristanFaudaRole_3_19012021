@@ -1,0 +1,41 @@
+.main__header {
+  &__teaser {
+    display: flex;
+    background-color: lighten(map-get($color, lgrey), 5%);
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5% 10% 15% 10%;
+    }
+    &__title {
+      @include mobile {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 0%;
+      }
+    }
+    &__p {
+      color: map-get($color, dgrey);
+      @include mobile {
+        font-size: 1em;
+      }
+    }
+    &__button {
+      background: linear-gradient(
+        176deg,
+        map-get($color, secondary) 0%,
+        map-get($color, primary) 100%
+      );
+      width: 75%;
+      padding: 5%;
+      border-radius: 25px;
+      text-decoration: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      box-shadow: 2px 3px 10px map-get($color, dgrey);
+      font-size: 1em;
+    }
+  }
+}
