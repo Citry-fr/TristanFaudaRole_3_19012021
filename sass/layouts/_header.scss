@@ -1,13 +1,9 @@
 .header {
-  @include mobile {
-  }
   &__loc {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 10px;
     background-color: map-get($color, lgrey);
-    @include mobile {
-      padding-left: 28%;
-    }
     &__map {
       align-self: center;
       font-size: 0.8em;

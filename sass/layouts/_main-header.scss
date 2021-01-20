@@ -2,24 +2,18 @@
   &__teaser {
     display: flex;
     background-color: lighten(map-get($color, lgrey), 5%);
-    @include mobile {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 5% 10% 15% 10%;
-    }
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 12px 50px 12px;
     &__title {
-      @include mobile {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 0%;
-      }
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 0%;
     }
     &__p {
       color: map-get($color, dgrey);
-      @include mobile {
-        font-size: 1em;
-      }
+      font-size: 1em;
     }
     &__button {
       background: linear-gradient(
@@ -28,7 +22,9 @@
         map-get($color, primary) 100%
       );
       width: 75%;
-      padding: 5%;
+      max-width: 295px;
+      max-height: 66px;
+      padding: 15px 0px 15px 0px;
       border-radius: 25px;
       text-decoration: none;
       border: none;
