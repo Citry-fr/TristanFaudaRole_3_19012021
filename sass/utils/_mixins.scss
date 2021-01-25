@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin tablet {
+  @media all and (max-width: map-get($breakpoint, tablet-max)) {
+    @content;
+  }
+}
 
 @mixin titleFont {
   font-family: map-get($font, title);
