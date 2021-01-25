@@ -1,0 +1,52 @@
+.main__footer {
+  background-color: darken(map-get($color, grey), 30%);
+  padding: 20px 10% 20px 10%;
+  @include mobile {
+    padding: 20px 0px 20px 15px;
+  }
+  &__logo {
+    font-family: map-get($font, title);
+    color: map-get($color, white);
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    @include mobile {
+      display: inline;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    @include mobile {
+      flex-direction: column;
+    }
+    &__element {
+      padding: 15px 0px 5px 0px;
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      @include mobile {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      &__a {
+        color: map-get($color, white);
+        text-decoration: none;
+        display: flex;
+        flex-wrap: nowrap;
+        align-self: center;
+        gap: 10px;
+        &.bold {
+          font-weight: bold;
+        }
+        &__icone {
+          font-size: 0.8em;
+          width: 10px;
+          align-self: center;
+        }
+      }
+    }
+  }
+}

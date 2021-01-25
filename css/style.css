@@ -183,4 +183,65 @@ body {
   }
 }
 
+.main__footer {
+  background-color: #3c3c3c;
+  padding: 20px 10% 20px 10%;
+}
+@media all and (max-width: 767px) {
+  .main__footer {
+    padding: 20px 0px 20px 15px;
+  }
+}
+.main__footer__logo {
+  font-family: "Shrikhand", cursive;
+  color: #fff;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+}
+@media all and (max-width: 767px) {
+  .main__footer__logo {
+    display: inline;
+  }
+}
+.main__footer__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+}
+@media all and (max-width: 767px) {
+  .main__footer__list {
+    flex-direction: column;
+  }
+}
+.main__footer__list__element {
+  padding: 15px 0px 5px 0px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+@media all and (max-width: 767px) {
+  .main__footer__list__element {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.main__footer__list__element__a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-self: center;
+  gap: 10px;
+}
+.main__footer__list__element__a.bold {
+  font-weight: bold;
+}
+.main__footer__list__element__a__icone {
+  font-size: 0.8em;
+  width: 10px;
+  align-self: center;
+}
+
 /*# sourceMappingURL=style.css.map */
