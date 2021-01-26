@@ -27,6 +27,7 @@
       width: 25%;
       display: flex;
       justify-content: center;
+      align-self: center;
       @include mobile {
         width: 100%;
         justify-content: flex-start;

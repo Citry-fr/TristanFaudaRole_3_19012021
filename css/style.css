@@ -143,6 +143,7 @@ body {
   gap: 3%;
 }
 .main__article__card__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 230px;
@@ -168,14 +169,13 @@ body {
 .main__article__card__content__heart {
   width: 20px;
   font-size: 1.5em;
-  position: relative;
-  left: 85%;
-  bottom: 60px;
+  position: absolute;
+  right: 25px;
+  bottom: 45px;
 }
 .main__article__card__content__new {
-  position: relative;
-  bottom: 250px;
-  right: -68%;
+  position: absolute;
+  right: 20px;
   font-size: 0.9em;
   color: #008766;
   background-color: #99e2d0;
@@ -233,6 +233,7 @@ body {
   width: 25%;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 @media all and (max-width: 767px) {
   .main__footer__list__element {

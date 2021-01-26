@@ -7,6 +7,7 @@
     grid-template-rows: repeat(2, 240px);
     gap: 3%;
     &__content {
+      position: relative;
       display: flex;
       flex-direction: column;
       height: 230px;
@@ -31,14 +32,13 @@
       &__heart {
         width: 20px;
         font-size: 1.5em;
-        position: relative;
-        left: 85%;
-        bottom: 60px;
+        position: absolute;
+        right: 25px;
+        bottom: 45px;
       }
       &__new {
-        position: relative;
-        bottom: 250px;
-        right: -68%;
+        position: absolute;
+        right: 20px;
         font-size: 0.9em;
         color: map-get($color, newT);
         background-color: map-get($color, newBG);
