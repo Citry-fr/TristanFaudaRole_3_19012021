@@ -155,6 +155,7 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
+  display: block;
 }
 .main__article__card__content__name {
   margin-bottom: 5px;
@@ -170,6 +171,18 @@ body {
   position: relative;
   left: 85%;
   bottom: 60px;
+}
+.main__article__card__content__new {
+  position: relative;
+  bottom: 250px;
+  right: -68%;
+  font-size: 0.9em;
+  color: #008766;
+  background-color: #99e2d0;
+  width: 80px;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+  border-radius: 3px;
 }
 @media all and (max-width: 767px) {
   .main__article__card {
