@@ -30,12 +30,32 @@ html {
   display: flex;
   width: 100%;
   justify-content: center;
+  text-decoration: none;
+  color: black;
 }
 .header__nav__a__img {
   display: flex;
   width: 137px;
   object-fit: cover;
 }
+.header__nav__a__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 3px;
+  font-size: 1.1em;
+  color: #3c3c3c;
+}
+.header__nav__a.menu {
+  display: initial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 15%;
+}
+
 body {
   width: auto;
   margin: 0px;

@@ -8,6 +8,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    text-decoration: none;
+    color: black;
     @include mobile {
     }
     &__img {
@@ -17,5 +19,22 @@
       @include mobile {
       }
     }
+    &__arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-top: 3px;
+      font-size: 1.1em;
+      color: darken(map-get($color, grey), 30%);
+    }
+  }
+  &__a.menu {
+    display: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15%;
   }
 }
