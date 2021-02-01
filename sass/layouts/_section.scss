@@ -1,0 +1,67 @@
+.main__section {
+  padding: 0px 10%;
+  position: relative;
+  bottom: 70px;
+  background-color: lighten(map-get($color, grey), 44%);
+  border-radius: 40px 40px 0 0;
+  @include mobile {
+    padding: 0;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    &__h1 {
+      @include titleFont;
+      font-weight: 100;
+    }
+    &__heart {
+      align-self: center;
+      font-size: 1.5em;
+    }
+  }
+  &__menu {
+    &__step {
+      padding: 0 15px;
+      &__title {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 1em;
+        margin-bottom: 5px;
+      }
+      &__divider {
+        border-bottom: 2px solid map-get($color, tertiary);
+        margin-bottom: 20px;
+        width: 38px;
+      }
+      &__cards {
+        margin-bottom: 35px;
+        &__card {
+          position: relative;
+          background-color: map-get($color, white);
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          margin-bottom: 15px;
+          border-radius: 15px;
+          @include shadow;
+          &__name {
+            font-size: 1em;
+            margin: 0 0 4px 0;
+          }
+          &__desc {
+            font-size: 0.8em;
+            margin: 0;
+          }
+          &__price {
+            font-size: 0.8em;
+            position: absolute;
+            margin: 0;
+            bottom: 10px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
