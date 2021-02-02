@@ -1,15 +1,22 @@
 .main__section {
   padding: 0px 10%;
+  margin: 0px 10%;
   position: relative;
   bottom: 70px;
   background-color: lighten(map-get($color, grey), 44%);
   border-radius: 40px 40px 0 0;
   @include mobile {
     padding: 0;
+    margin: 0;
+  }
+  @include tablet {
+    margin: 0;
+    padding: 0;
   }
   &__title {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 10%;
     margin: 0;
     &__h1 {
       @include titleFont;
@@ -21,6 +28,10 @@
     }
   }
   &__menu {
+    padding: 0 10%;
+    @include mobile {
+      padding: 0;
+    }
     &__step {
       padding: 0 15px;
       &__title {
@@ -62,6 +73,32 @@
           }
         }
       }
+    }
+  }
+  &__order {
+    display: flex;
+    justify-content: center;
+    background-color: lighten(map-get($color, grey), 44%);
+    padding-top: 20px;
+    &__button {
+      background: linear-gradient(
+        176deg,
+        map-get($color, secondary) 0%,
+        map-get($color, primary) 100%
+      );
+      width: 75%;
+      max-width: 295px;
+      max-height: 66px;
+      min-width: 129px;
+      padding: 15px 0px 15px 0px;
+      border-radius: 25px;
+      text-decoration: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      @include shadow;
+      font-size: 1em;
+      text-align: center;
     }
   }
 }
