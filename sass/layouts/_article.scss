@@ -33,11 +33,38 @@
           padding-left: 10px;
         }
         &__heart {
-          width: 20px;
+          width: 24px;
           font-size: 1.5em;
           position: absolute;
           right: 25px;
           bottom: 45px;
+          color: black;
+          &:hover {
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(
+              176deg,
+              map-get($color, secondary) 0%,
+              map-get($color, primary) 100%
+            );
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          &:active {
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(
+              176deg,
+              map-get($color, secondary) 0%,
+              map-get($color, primary) 100%
+            );
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
         &__new {
           position: absolute;

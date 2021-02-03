@@ -113,7 +113,7 @@ body {
 }
 @media all and (max-width: 767px) {
   .main__header__img {
-    height: auto;
+    height: 350px;
   }
 }
 
@@ -218,11 +218,28 @@ body {
   padding-left: 10px;
 }
 .main__article__card__a__content__heart {
-  width: 20px;
+  width: 24px;
   font-size: 1.5em;
   position: absolute;
   right: 25px;
   bottom: 45px;
+  color: black;
+}
+.main__article__card__a__content__heart:hover {
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main__article__card__a__content__heart:active {
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .main__article__card__a__content__new {
   position: absolute;
@@ -281,7 +298,7 @@ body {
   }
 }
 .main__footer__list__element {
-  padding: 15px 0px 5px 0px;
+  padding: 3px 0px 5px 0px;
   width: 25%;
   display: flex;
   justify-content: center;
@@ -310,23 +327,16 @@ body {
 }
 
 .main__section {
-  padding: 0px 10%;
-  margin: 0px 10%;
+  padding: 0px 10% 50px 10%;
+  margin: -70px 10% 0px 10%;
   position: relative;
-  bottom: 70px;
   background-color: #f8f8f8;
   border-radius: 40px 40px 0 0;
 }
-@media all and (max-width: 767px) {
-  .main__section {
-    padding: 0;
-    margin: 0;
-  }
-}
 @media all and (max-width: 1199px) {
   .main__section {
-    margin: 0;
-    padding: 0;
+    margin: -70px 0 0 0;
+    padding: 0 0 50px 0;
   }
 }
 .main__section__title {
@@ -335,6 +345,16 @@ body {
   padding: 0 10%;
   margin: 0;
 }
+@media all and (max-width: 1199px) {
+  .main__section__title {
+    padding: 0 10%;
+  }
+}
+@media all and (max-width: 767px) {
+  .main__section__title {
+    padding: 0 15px;
+  }
+}
 .main__section__title__h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
@@ -342,6 +362,22 @@ body {
 .main__section__title__heart {
   align-self: center;
   font-size: 1.5em;
+}
+.main__section__title__heart:hover {
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main__section__title__heart:active {
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .main__section__menu {
   padding: 0 10%;
@@ -414,10 +450,6 @@ body {
   box-shadow: 2px 3px 10px #888;
   font-size: 1em;
   text-align: center;
-}
-
-.main.menu {
-  background-color: #f8f8f8;
 }
 
 /*# sourceMappingURL=style.css.map */
