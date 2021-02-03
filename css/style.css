@@ -397,7 +397,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #f8f8f8;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 .main__section__order__button {
   background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
