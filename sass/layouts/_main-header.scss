@@ -33,6 +33,17 @@
       font-weight: bold;
       @include shadow;
       font-size: 1em;
+      transition: 1s;
+      &:hover,
+      &:active {
+        background: linear-gradient(
+          176deg,
+          map-get($color, primary) 0%,
+          map-get($color, secondary) 100%
+        );
+        scale: 1.2;
+        transition: 1s;
+      }
     }
   }
   &__img {
@@ -40,6 +51,7 @@
     object-fit: cover;
     width: 100%;
     height: 500px;
+    @include shadow;
     @include mobile {
       height: 350px;
     }

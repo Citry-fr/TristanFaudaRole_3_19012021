@@ -12,6 +12,14 @@
       padding: 10px 0px 10px 0px;
       width: 33%;
       height: 80px;
+      &:hover,
+      &:active {
+        background-color: lighten(map-get($color, primary), 30%);
+      }
+      &:hover > &__icone,
+      &:active > &__icone {
+        color: darken(map-get($color, primary), 15%);
+      }
       @include shadow;
       &__icone {
         align-self: center;

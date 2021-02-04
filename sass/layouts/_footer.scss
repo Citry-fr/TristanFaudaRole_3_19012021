@@ -39,6 +39,10 @@
         flex-wrap: nowrap;
         align-self: center;
         gap: 10px;
+        &:hover,
+        &:active {
+          color: map-get($color, primary);
+        }
         &.bold {
           font-weight: bold;
         }
