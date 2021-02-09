@@ -80,10 +80,12 @@
           position: relative;
           background-color: map-get($color, white);
           display: flex;
-          flex-direction: column;
-          padding: 10px;
+          justify-content: space-between;
+          gap: 0;
           margin-bottom: 15px;
           border-radius: 15px;
+          max-height: 68px;
+          overflow: hidden;
           @include shadow;
           animation: 0.8s ease-out 0s 1 slide-up backwards;
 
@@ -102,22 +104,46 @@
           &:hover {
             cursor: pointer;
           }
-
-          &__name {
-            font-size: 1em;
-            margin: 0 0 4px 0;
+          &:hover &__anim {
+            width: 80px;
           }
-          &__desc {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 25px;
-            &__p {
-              font-size: 0.8em;
-              margin: 0;
+          &:hover &__anim__check {
+            transform: rotate(360deg);
+          }
+          &__info {
+            width: 100%;
+            padding: 10px;
+            &__name {
+              font-size: 1em;
+              margin: 0 0 4px 0;
             }
-            &__price {
-              font-size: 0.8em;
+            &__desc {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 25px;
+              &__p {
+                font-size: 0.8em;
+                margin: 0;
+              }
+              &__price {
+                font-size: 0.8em;
+              }
+            }
+          }
+          &__anim {
+            width: 0px;
+            transition: all 0.5s linear;
+            background-color: map-get($color, tertiary);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            &__check {
+              font-size: 2em;
+              margin-left: 20px;
+              color: map-get($color, white);
+              transform-origin: center;
+              transition: all 0.5s linear;
             }
           }
         }

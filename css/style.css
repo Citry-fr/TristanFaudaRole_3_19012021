@@ -420,10 +420,12 @@ body {
   position: relative;
   background-color: #fff;
   display: flex;
-  flex-direction: column;
-  padding: 10px;
+  justify-content: space-between;
+  gap: 0;
   margin-bottom: 15px;
   border-radius: 15px;
+  max-height: 68px;
+  overflow: hidden;
   box-shadow: 2px 3px 10px #888;
   animation: 0.8s ease-out 0s 1 slide-up backwards;
 }
@@ -442,22 +444,47 @@ body {
 .main__section__menu__step__cards__card:hover {
   cursor: pointer;
 }
-.main__section__menu__step__cards__card__name {
+.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim {
+  width: 80px;
+}
+.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim__check {
+  transform: rotate(360deg);
+}
+.main__section__menu__step__cards__card__info {
+  width: 100%;
+  padding: 10px;
+}
+.main__section__menu__step__cards__card__info__name {
   font-size: 1em;
   margin: 0 0 4px 0;
 }
-.main__section__menu__step__cards__card__desc {
+.main__section__menu__step__cards__card__info__desc {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 25px;
 }
-.main__section__menu__step__cards__card__desc__p {
+.main__section__menu__step__cards__card__info__desc__p {
   font-size: 0.8em;
   margin: 0;
 }
-.main__section__menu__step__cards__card__desc__price {
+.main__section__menu__step__cards__card__info__desc__price {
   font-size: 0.8em;
+}
+.main__section__menu__step__cards__card__anim {
+  width: 0px;
+  transition: all 0.5s linear;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.main__section__menu__step__cards__card__anim__check {
+  font-size: 2em;
+  margin-left: 20px;
+  color: #fff;
+  transform-origin: center;
+  transition: all 0.5s linear;
 }
 .main__section__order {
   display: flex;
