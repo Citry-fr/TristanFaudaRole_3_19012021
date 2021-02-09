@@ -104,10 +104,12 @@
           &:hover {
             cursor: pointer;
           }
-          &:hover &__anim {
+          &:hover &__anim,
+          &:active &__anim {
             width: 80px;
           }
-          &:hover &__anim__check {
+          &:hover &__anim__check,
+          &:active &__anim__check {
             transform: rotate(360deg);
           }
           &__info {
@@ -133,7 +135,7 @@
           }
           &__anim {
             width: 0px;
-            transition: all 0.5s linear;
+            transition: all 0.25s linear;
             background-color: map-get($color, tertiary);
             display: flex;
             align-items: center;
@@ -143,7 +145,7 @@
               margin-left: 20px;
               color: map-get($color, white);
               transform-origin: center;
-              transition: all 0.5s linear;
+              transition: all 0.25s linear;
             }
           }
         }

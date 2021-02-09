@@ -444,10 +444,10 @@ body {
 .main__section__menu__step__cards__card:hover {
   cursor: pointer;
 }
-.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim {
+.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim, .main__section__menu__step__cards__card:active .main__section__menu__step__cards__card__anim {
   width: 80px;
 }
-.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim__check {
+.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim__check, .main__section__menu__step__cards__card:active .main__section__menu__step__cards__card__anim__check {
   transform: rotate(360deg);
 }
 .main__section__menu__step__cards__card__info {
@@ -473,7 +473,7 @@ body {
 }
 .main__section__menu__step__cards__card__anim {
   width: 0px;
-  transition: all 0.5s linear;
+  transition: all 0.25s linear;
   background-color: #99e2d0;
   display: flex;
   align-items: center;
@@ -484,7 +484,7 @@ body {
   margin-left: 20px;
   color: #fff;
   transform-origin: center;
-  transition: all 0.5s linear;
+  transition: all 0.25s linear;
 }
 .main__section__order {
   display: flex;
