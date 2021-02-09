@@ -106,13 +106,14 @@
           }
           &:hover &__anim,
           &:active &__anim {
-            width: 80px;
+            margin-right: 0px;
           }
           &:hover &__anim__check,
           &:active &__anim__check {
             transform: rotate(360deg);
           }
           &__info {
+            float: left;
             width: 100%;
             padding: 10px;
             &__name {
@@ -134,15 +135,17 @@
             }
           }
           &__anim {
-            width: 0px;
+            float: right;
+            min-width: 68px;
             transition: all 0.25s linear;
             background-color: map-get($color, tertiary);
             display: flex;
+            justify-content: center;
             align-items: center;
             overflow: hidden;
+            margin-right: -69px;
             &__check {
               font-size: 2em;
-              margin-left: 20px;
               color: map-get($color, white);
               transform-origin: center;
               transition: all 0.25s linear;
