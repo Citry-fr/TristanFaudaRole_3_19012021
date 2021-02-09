@@ -108,7 +108,7 @@ body {
 }
 .main__header__teaser__button:hover, .main__header__teaser__button:active {
   background: linear-gradient(176deg, #9356dc 0%, #ff79da 100%);
-  scale: 1.2;
+  transform: scale(1.2);
   transition: 1s;
 }
 .main__header__img {
@@ -514,7 +514,7 @@ body {
 }
 .main__section__order__button:hover, .main__section__order__button:active {
   background: linear-gradient(176deg, #9356dc 0%, #ff79da 100%);
-  scale: 1.2;
+  transform: scale(1.2);
   transition: 1s;
 }
 
