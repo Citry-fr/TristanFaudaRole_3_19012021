@@ -334,6 +334,18 @@ body {
   align-self: center;
 }
 
+@keyframes slide-up {
+  from {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    display: initial;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .main__section {
   padding: 0px 10% 50px 10%;
   margin: -70px 10% 0px 10%;
@@ -413,6 +425,22 @@ body {
   margin-bottom: 15px;
   border-radius: 15px;
   box-shadow: 2px 3px 10px #888;
+  animation: 0.8s ease-out 0s 1 slide-up backwards;
+}
+.main__section__menu__step__cards__card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.main__section__menu__step__cards__card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.main__section__menu__step__cards__card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.main__section__menu__step__cards__card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.main__section__menu__step__cards__card:hover {
+  cursor: pointer;
 }
 .main__section__menu__step__cards__card__name {
   font-size: 1em;
