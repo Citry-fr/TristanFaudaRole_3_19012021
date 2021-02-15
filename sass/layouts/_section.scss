@@ -11,6 +11,15 @@
   }
 }
 
+@keyframes width-down {
+  from {
+    width: 100%;
+  }
+  to {
+    width: calc(100% - 68px);
+  }
+}
+
 .main__section {
   padding: 0px 10% 50px 10%;
   margin: -70px 10% 0px 10%;
@@ -106,23 +115,34 @@
           }
           &:hover &__anim,
           &:active &__anim {
-            margin-right: 0px;
+            right: 0px;
           }
           &:hover &__anim__check,
           &:active &__anim__check {
             transform: rotate(360deg);
           }
+
+          &:hover &__info__name,
+          &:hover &__info__desc__p,
+          &:hover &__info__desc {
+            animation: 0.25s linear 0s 1 width-down forwards;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
           &__info {
             float: left;
             width: 100%;
             padding: 10px;
             &__name {
               font-size: 1em;
-              margin: 0 0 4px 0;
+              margin: 0 0 10px 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
             }
             &__desc {
-              display: flex;
-              justify-content: space-between;
               align-items: center;
               height: 25px;
               &__p {
@@ -130,20 +150,23 @@
                 margin: 0;
               }
               &__price {
+                margin-top: -15px;
                 font-size: 0.8em;
+                text-align: right;
               }
             }
           }
           &__anim {
-            float: right;
+            position: absolute;
             min-width: 68px;
+            height: 100%;
             transition: all 0.25s linear;
             background-color: map-get($color, tertiary);
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            margin-right: -69px;
+            right: -69px;
             &__check {
               font-size: 2em;
               color: map-get($color, white);
