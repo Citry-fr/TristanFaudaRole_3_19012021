@@ -124,7 +124,10 @@
 
           &:hover &__info__name,
           &:hover &__info__desc__p,
-          &:hover &__info__desc {
+          &:hover &__info__desc,
+          &:active &__info__name,
+          &:active &__info__desc__p,
+          &:active &__info__desc {
             animation: 0.25s linear 0s 1 width-down forwards;
             overflow: hidden;
             white-space: nowrap;

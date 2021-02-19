@@ -458,7 +458,7 @@ body {
 .main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__anim__check, .main__section__menu__step__cards__card:active .main__section__menu__step__cards__card__anim__check {
   transform: rotate(360deg);
 }
-.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__info__name, .main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__info__desc__p, .main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__info__desc {
+.main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__info__name, .main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__info__desc__p, .main__section__menu__step__cards__card:hover .main__section__menu__step__cards__card__info__desc, .main__section__menu__step__cards__card:active .main__section__menu__step__cards__card__info__name, .main__section__menu__step__cards__card:active .main__section__menu__step__cards__card__info__desc__p, .main__section__menu__step__cards__card:active .main__section__menu__step__cards__card__info__desc {
   animation: 0.25s linear 0s 1 width-down forwards;
   overflow: hidden;
   white-space: nowrap;
