@@ -1,221 +1,224 @@
 @keyframes slide-up {
-  from {
-    display: none;
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    display: initial;
-    transform: translateY(0px);
-    opacity: 1;
-  }
+    from {
+        display: none;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        display: initial;
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 @keyframes width-down {
-  from {
-    width: 100%;
-  }
-  to {
-    width: calc(100% - 68px);
-  }
+    from {
+        width: 100%;
+    }
+    to {
+        width: calc(100% - 68px);
+    }
 }
 
 .main__section {
-  padding: 0px 10% 50px 10%;
-  margin: -70px 10% 0px 10%;
-  position: relative;
-  background-color: lighten(map-get($color, grey), 44%);
-  border-radius: 40px 40px 0 0;
-
-  @include tablet {
-    margin: -70px 0 0 0;
-    padding: 0 0 50px 0;
-  }
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10%;
-    margin: 0;
-    @include tablet {
-      padding: 0 10%;
-    }
-    @include mobile {
-      padding: 0 15px;
-    }
-    &__h1 {
-      @include titleFont;
-      font-weight: 100;
-    }
-    &__heart {
-      align-self: center;
-      font-size: 1.5em;
-      &:hover,
-      &:active {
-        font-weight: bold;
-        color: white;
-        background: linear-gradient(
-          176deg,
-          map-get($color, secondary) 0%,
-          map-get($color, primary) 100%
-        );
-
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-  &__menu {
-    padding: 0 10%;
-    @include mobile {
-      padding: 0;
-    }
-    &__step {
-      padding: 0 15px;
-      &__title {
-        text-transform: uppercase;
-        font-weight: normal;
-        font-size: 1em;
-        margin-bottom: 5px;
-      }
-      &__divider {
-        border-bottom: 2px solid map-get($color, tertiary);
-        margin-bottom: 20px;
-        width: 38px;
-      }
-      &__cards {
-        margin-bottom: 35px;
-        &__card {
-          position: relative;
-          background-color: map-get($color, white);
-          display: flex;
-          justify-content: space-between;
-          gap: 0;
-          margin-bottom: 15px;
-          border-radius: 15px;
-          max-height: 68px;
-          overflow: hidden;
-          @include shadow;
-          animation: 0.8s ease-out 0s 1 slide-up backwards;
-
-          &:nth-child(1) {
-            animation-delay: 0.1s;
-          }
-          &:nth-child(2) {
-            animation-delay: 0.2s;
-          }
-          &:nth-child(3) {
-            animation-delay: 0.3s;
-          }
-          &:nth-child(4) {
-            animation-delay: 0.4s;
-          }
-          &:hover {
-            cursor: pointer;
-          }
-          &:hover &__anim,
-          &:active &__anim {
-            right: 0px;
-          }
-          &:hover &__anim__check,
-          &:active &__anim__check {
-            transform: rotate(360deg);
-          }
-
-          &:hover &__info__name,
-          &:hover &__info__desc__p,
-          &:hover &__info__desc,
-          &:active &__info__name,
-          &:active &__info__desc__p,
-          &:active &__info__desc {
-            animation: 0.25s linear 0s 1 width-down forwards;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-
-          &__info {
-            float: left;
-            width: 100%;
-            padding: 10px;
-            &__name {
-              font-size: 1em;
-              margin: 0 0 10px 0;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-            }
-            &__desc {
-              align-items: center;
-              height: 25px;
-              &__p {
-                font-size: 0.8em;
-                margin: 0;
-              }
-              &__price {
-                margin-top: -15px;
-                font-size: 0.8em;
-                text-align: right;
-              }
-            }
-          }
-          &__anim {
-            position: absolute;
-            min-width: 68px;
-            height: 100%;
-            transition: all 0.25s linear;
-            background-color: map-get($color, tertiary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            right: -69px;
-            &__check {
-              font-size: 2em;
-              color: map-get($color, white);
-              transform-origin: center;
-              transition: all 0.25s linear;
-            }
-          }
-        }
-      }
-    }
-  }
-  &__order {
-    display: flex;
-    justify-content: center;
+    padding: 0px 10% 50px 10%;
+    margin: -70px 10% 0px 10%;
+    position: relative;
     background-color: lighten(map-get($color, grey), 44%);
-    padding: 20px 0;
-    &__button {
-      background: linear-gradient(
-        176deg,
-        map-get($color, secondary) 0%,
-        map-get($color, primary) 100%
-      );
-      width: 75%;
-      max-width: 295px;
-      max-height: 66px;
-      min-width: 129px;
-      padding: 15px 0px 15px 0px;
-      border-radius: 25px;
-      text-decoration: none;
-      border: none;
-      color: white;
-      font-weight: bold;
-      @include shadow;
-      font-size: 1em;
-      text-align: center;
-      transition: 1s;
-      &:hover,
-      &:active {
-        background: linear-gradient(
-          176deg,
-          map-get($color, primary) 0%,
-          map-get($color, secondary) 100%
-        );
-        transform: scale(1.2);
-        transition: 1s;
-      }
+    border-radius: 40px 40px 0 0;
+
+    @include shadow;
+
+    @include tablet {
+        margin: -70px 0 0 0;
+        padding: 0 0 50px 0;
     }
-  }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin: 0;
+        @include tablet {
+            padding: 0 10%;
+        }
+        @include mobile {
+            padding: 0 15px;
+        }
+        &__h1 {
+            @include titleFont;
+            font-weight: 100;
+        }
+        &__heart {
+            align-self: center;
+            font-size: 1.5em;
+            &:hover,
+            &:active {
+                font-weight: bold;
+                color: white;
+                background: linear-gradient(
+                    176deg,
+                    map-get($color, secondary) 0%,
+                    map-get($color, primary) 100%
+                );
+
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &__menu {
+        padding: 0 10%;
+        @include mobile {
+            padding: 0;
+        }
+        &__step {
+            padding: 0 15px;
+            &__title {
+                text-transform: uppercase;
+                font-weight: normal;
+                font-size: 1em;
+                margin-bottom: 5px;
+            }
+            &__divider {
+                border-bottom: 2px solid map-get($color, tertiary);
+                margin-bottom: 20px;
+                width: 38px;
+            }
+            &__cards {
+                margin-bottom: 35px;
+                &__card {
+                    position: relative;
+                    background-color: map-get($color, white);
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 0;
+                    margin-bottom: 15px;
+                    border-radius: 15px;
+                    max-height: 68px;
+                    overflow: hidden;
+                    @include shadow;
+                    animation: 0.8s ease-out 0s 1 slide-up backwards;
+
+                    &:nth-child(1) {
+                        animation-delay: 0.1s;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: 0.2s;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 0.3s;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 0.4s;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &:hover &__anim,
+                    &:active &__anim {
+                        right: 0px;
+                    }
+                    &:hover &__anim__check,
+                    &:active &__anim__check {
+                        transform: rotate(360deg);
+                    }
+
+                    &:hover &__info__name,
+                    &:hover &__info__desc__p,
+                    &:hover &__info__desc,
+                    &:active &__info__name,
+                    &:active &__info__desc__p,
+                    &:active &__info__desc {
+                        animation: 0.25s linear 0s 1 width-down forwards;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                    &__info {
+                        float: left;
+                        width: 100%;
+                        padding: 10px;
+                        &__name {
+                            font-size: 1em;
+                            margin: 0 0 10px 0;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                        &__desc {
+                            align-items: center;
+                            height: 25px;
+                            &__p {
+                                font-size: 0.8em;
+                                margin: 0;
+                            }
+                            &__price {
+                                margin-top: -15px;
+                                font-size: 0.8em;
+                                text-align: right;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    &__anim {
+                        position: absolute;
+                        min-width: 68px;
+                        height: 100%;
+                        transition: all 0.25s linear;
+                        background-color: map-get($color, tertiary);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        right: -69px;
+                        &__check {
+                            font-size: 2em;
+                            color: map-get($color, white);
+                            transform-origin: center;
+                            transition: all 0.25s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__order {
+        display: flex;
+        justify-content: center;
+        background-color: lighten(map-get($color, grey), 44%);
+        padding: 20px 0;
+        &__button {
+            background: linear-gradient(
+                176deg,
+                map-get($color, secondary) 0%,
+                map-get($color, primary) 100%
+            );
+            width: 75%;
+            max-width: 295px;
+            max-height: 66px;
+            min-width: 129px;
+            padding: 15px 0px 15px 0px;
+            border-radius: 25px;
+            text-decoration: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            @include shadow;
+            font-size: 1em;
+            text-align: center;
+            transition: 1s;
+            &:hover,
+            &:active {
+                background: linear-gradient(
+                    176deg,
+                    map-get($color, primary) 0%,
+                    map-get($color, secondary) 100%
+                );
+                transform: scale(1.2);
+                transition: 1s;
+            }
+        }
+    }
 }
