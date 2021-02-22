@@ -16,7 +16,7 @@
         width: 100%;
     }
     to {
-        width: calc(100% - 68px);
+        width: calc(100% - 100px);
     }
 }
 
@@ -126,14 +126,17 @@
 
                     &:hover &__info__name,
                     &:hover &__info__desc__p,
-                    &:hover &__info__desc,
                     &:active &__info__name,
-                    &:active &__info__desc__p,
-                    &:active &__info__desc {
+                    &:active &__info__desc__p {
                         animation: 0.25s linear 0s 1 width-down forwards;
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
+                    }
+                    &:hover &__info__desc__price,
+                    &:active &__info__desc__price {
+                        transform: translateX(-68px);
+                        transition: 0.25s linear;
                     }
 
                     &__info {
@@ -143,9 +146,6 @@
                         &__name {
                             font-size: 1em;
                             margin: 0 0 10px 0;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
                         }
                         &__desc {
                             align-items: center;
@@ -159,6 +159,7 @@
                                 font-size: 0.8em;
                                 text-align: right;
                                 font-weight: bold;
+                                transition: 0.25s linear;
                             }
                         }
                     }
