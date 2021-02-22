@@ -1,80 +1,80 @@
 .main__article {
-  padding: 25px 10% 50px 10%;
-  background-color: lighten(map-get($color, grey), 44%);
-  &__card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 240px);
-    gap: 3%;
-    &__a {
-      text-decoration: none;
-      color: black;
-      &__content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        height: 230px;
-        border-radius: 15px;
-        @include shadow;
-        margin-bottom: 15px;
-        &__img {
-          max-width: 100%;
-          height: 150px;
-          object-fit: cover;
-          border-radius: 15px 15px 0px 0px;
-          display: block;
-        }
-        &__name {
-          margin-bottom: 5px;
-          padding-left: 10px;
-        }
-        &__p {
-          margin-top: 0px;
-          padding-left: 10px;
-        }
-        &__heart {
-          width: 24px;
-          font-size: 1.5em;
-          position: absolute;
-          right: 25px;
-          bottom: 45px;
-          color: black;
-          &:hover,
-          &:active {
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(
-              176deg,
-              map-get($color, secondary) 0%,
-              map-get($color, primary) 100%
-            );
-
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
-        &__new {
-          position: absolute;
-          right: 20px;
-          font-size: 0.9em;
-          color: map-get($color, newT);
-          background-color: map-get($color, newBG);
-          width: 80px;
-          text-align: center;
-          padding: 5px 0px 5px 0px;
-          border-radius: 3px;
-        }
-      }
-    }
-  }
-  @include mobile {
+    padding: 25px 10% 50px 10%;
+    background-color: lighten(map-get($color, grey), 44%);
     &__card {
-      display: flex;
-      flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 240px);
+        gap: 3%;
+        &__content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 230px;
+            border-radius: 15px;
+            @include shadow;
+            margin-bottom: 15px;
+            &__a {
+                &__img {
+                    max-width: 100%;
+                    min-width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 15px 15px 0px 0px;
+                    display: block;
+                }
+            }
+
+            &__name {
+                margin-bottom: 5px;
+                padding-left: 10px;
+            }
+            &__p {
+                margin-top: 0px;
+                padding-left: 10px;
+            }
+            &__heart {
+                width: 24px;
+                font-size: 1.5em;
+                position: absolute;
+                right: 25px;
+                bottom: 45px;
+                color: black;
+                &:hover,
+                &:active {
+                    font-weight: bold;
+                    color: white;
+                    background: linear-gradient(
+                        176deg,
+                        map-get($color, secondary) 0%,
+                        map-get($color, primary) 100%
+                    );
+
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            &__new {
+                position: absolute;
+                right: 20px;
+                font-size: 0.9em;
+                color: map-get($color, newT);
+                background-color: map-get($color, newBG);
+                width: 80px;
+                text-align: center;
+                padding: 5px 0px 5px 0px;
+                border-radius: 3px;
+            }
+        }
     }
-  }
-  @include tablet {
-    padding: 25px 10px 50px 10px;
-  }
+    @include mobile {
+        &__card {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @include tablet {
+        padding: 25px 10px 50px 10px;
+    }
 }
