@@ -11,15 +11,6 @@
     }
 }
 
-@keyframes width-down {
-    from {
-        width: 100%;
-    }
-    to {
-        width: calc(100% - 100px);
-    }
-}
-
 .main__section {
     padding: 0px 10% 50px 10%;
     margin: -70px 10% 0px 10%;
@@ -128,7 +119,7 @@
                     &:hover &__info__desc__p,
                     &:active &__info__name,
                     &:active &__info__desc__p {
-                        animation: 0.25s linear 0s 1 width-down forwards;
+                        width: calc(100% - 100px);
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
@@ -146,6 +137,11 @@
                         &__name {
                             font-size: 1em;
                             margin: 0 0 10px 0;
+                            width: 100%;
+                            transition: width 0.25s linear;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
                         }
                         &__desc {
                             align-items: center;
@@ -153,6 +149,11 @@
                             &__p {
                                 font-size: 0.8em;
                                 margin: 0;
+                                width: 100%;
+                                transition: width 0.25s linear;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
                             }
                             &__price {
                                 margin-top: -15px;
