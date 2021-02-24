@@ -38,7 +38,7 @@
                 font-size: 1.5em;
                 position: absolute;
                 right: 25px;
-                bottom: 45px;
+                bottom: 35px;
                 color: black;
                 &:hover,
                 &:active {
@@ -57,7 +57,7 @@
             }
             &__new {
                 position: absolute;
-                right: 20px;
+                right: 15px;
                 font-size: 0.9em;
                 color: map-get($color, newT);
                 background-color: map-get($color, newBG);
