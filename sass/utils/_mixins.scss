@@ -1,22 +1,22 @@
 @mixin mobile {
-  @media all and (max-width: map-get($breakpoint, mobile)) {
-    @content;
-  }
+    @media all and (max-width: map-get($breakpoint, mobile)) {
+        @content;
+    }
 }
 @mixin tablet {
-  @media all and (max-width: map-get($breakpoint, tablet-max)) {
-    @content;
-  }
+    @media all and (max-width: map-get($breakpoint, tablet-max)) {
+        @content;
+    }
 }
 
 @mixin titleFont {
-  font-family: map-get($font, title);
+    font-family: map-get($font, title);
 }
 
 @mixin textFont {
-  font-family: map-get($font, text);
+    font-family: map-get($font, text);
 }
 
 @mixin shadow {
-  box-shadow: 2px 3px 10px map-get($color, grey);
+    box-shadow: 0px 0px 10px map-get($color, grey);
 }
